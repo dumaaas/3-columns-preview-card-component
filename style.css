@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+    --font-big-shoulders: 'Big Shoulders Display', cursive;
+    --font-lexend-deca: 'Lexend Deca', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--font-lexend-deca);
+}
+
+main {
+    background-color: var(--very-light-gray);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    border-radius: 14px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+@media only screen and (max-width: 965px) {
+    main {
+      flex-direction: column;
+      padding: 80px 20px;
+    }
+
+    .card {
+        padding: 45px !important;
+        gap: 30px !important;
+    }
+
+    .card.card-orange {
+        border-bottom-left-radius: 0px !important;
+        border-top-right-radius: 12px;
+    }
+
+    .card.card-green {
+        border-top-right-radius: 0px !important;
+        border-bottom-left-radius: 12px;
+    }
+
+    .card-top {
+        gap: 25px !important;
+    }
+
+    .card-title {
+        font-size: 32px !important;
+    }
+
+    .card-description {
+        max-width: 100% !important;
+        font-size: 14px !important;
+    }
+
+    button {
+        font-size: 14px !important;
+        padding: 12px !important;
+        max-width: 134px !important;
+    }
+
+  }
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--bright-orange);
+    padding: 55px;
+    gap: 80px;
+}
+
+.card.card-orange {
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+.card.card-cyan {
+    background-color: var(--dark-cyan);
+}
+
+.card.card-green {
+    background-color: var(--very-dark-cyan);
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.card img {
+    width: 64px;
+}
+
+.card-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.card-title {
+    font-family: var(--font-big-shoulders);
+    text-transform: uppercase;
+    font-size: 38px;
+    color: var(--very-light-gray);
+}
+
+.card-description {
+    font-size: 15px;
+    line-height: 26px;
+    color: var(--transparent-white);
+    max-width: 200px;
+}
+
+button {
+    border-radius: 200px;
+    border: 2px solid transparent;
+    color: var(--bright-orange);
+    font-size: 16px;
+    font-weight: 500;
+    padding: 14px;
+    display: inline-block;
+    text-align: center;
+    max-width: 148px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+button.btn-cyan {
+    color: var(--dark-cyan)
+}
+
+button.btn-green {
+    color: var(--very-dark-cyan)
+}
+
+button:hover {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
